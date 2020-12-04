@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(TomcatWarApplication.class);
+        return application.sources(TomcatWarApplication.class); // 在SpringApplication中添加该source,bean定义加载器加载的时候会加载该source
     }
 
 }
