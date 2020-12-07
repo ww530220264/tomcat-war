@@ -1,5 +1,6 @@
 package com.sourcecode.springboot.tomcatwar.annotation;
 
+import com.sourcecode.springboot.tomcatwar.config.registrar.MyHandlerRegistrar;
 import com.sourcecode.springboot.tomcatwar.config.registrar.MyRegistrar;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Import;
@@ -10,7 +11,7 @@ import java.lang.annotation.*;
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Import(MyRegistrar.class)
+@Import({MyRegistrar.class, MyHandlerRegistrar.class})
 public @interface MyScan {
 
     @AliasFor("value")

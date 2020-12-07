@@ -5,4 +5,5 @@ public interface IHelloService {
 
     String testAop();
     String testNoAop();
+    String getCircleServiceName();
 }

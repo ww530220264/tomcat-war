@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class HelloController {
 
-    @Autowired
-    private IHelloService helloService;
+//    @Autowired
+//    private IHelloService helloService;
 
     @GetMapping("/index")
     public String index() {
@@ -22,11 +22,12 @@ public class HelloController {
 
     @GetMapping("/aop")
     public String aop() {
-        return helloService.testAop();
+//        return helloService.testAop();
+        return "AOP";
     }
 
     @GetMapping("/noAop")
     public String noAop() {
-        return helloService.testNoAop();
+        return "NOAOP";
     }
 }

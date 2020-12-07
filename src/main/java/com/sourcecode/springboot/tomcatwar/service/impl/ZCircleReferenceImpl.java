@@ -6,23 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class HelloServiceImpl implements IHelloService {
+public class ZCircleReferenceImpl implements ICircleReferenceService {
 
     @Autowired
-    private ICircleReferenceService circleReferenceService;
+    private IHelloService helloService;
 
     @Override
-    public String testAop() {
-        return "HELLO-SERVICE";
+    public String test() {
+        return helloService.testNoAop();
     }
 
     @Override
-    public String testNoAop() {
-        return "NO-AOP";
-    }
-
-    @Override
-    public String getCircleServiceName() {
-        return circleReferenceService.getServiceName();
+    public String getServiceName() {
+        return "CIRCLE-REFERENCE-SERVICE";
     }
 }
