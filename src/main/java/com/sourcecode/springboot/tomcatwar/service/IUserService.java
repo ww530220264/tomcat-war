@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface IUserService {
     int saveUser(UserPO po);
+    int saveUserWithTX(UserPO po);
     List<UserPO> queryUser();
 }

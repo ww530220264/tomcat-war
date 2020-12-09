@@ -21,6 +21,12 @@ public class UserController {
         userPO.setName(name);
         return userService.saveUser(userPO);
     }
+    @RequestMapping("/saveWithTX")
+    public int saveWithTX(String name) {
+        UserPO userPO = new UserPO();
+        userPO.setName(name);
+        return userService.saveUser(userPO);
+    }
 
     @RequestMapping("/query")
     public List<UserPO> queryUser() {

@@ -5,6 +5,7 @@ import com.sourcecode.springboot.tomcatwar.po.UserPO;
 import com.sourcecode.springboot.tomcatwar.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -16,6 +17,12 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public int saveUser(UserPO po) {
+        return userDao.saveUser(po);
+    }
+
+    @Override
+    @Transactional
+    public int saveUserWithTX(UserPO po) {
         return userDao.saveUser(po);
     }
 
