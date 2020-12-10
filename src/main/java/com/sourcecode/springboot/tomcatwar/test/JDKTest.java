@@ -37,25 +37,12 @@ public class JDKTest {
 
     public interface HelloService {
         String sayHello(String name);
-
-        String sayHello1(String name);
     }
 
     public static class HelloServiceImpl implements HelloService {
 
         @Override
         public String sayHello(String name) {
-            System.err.println("i am " + name);
-            return "i am " + name;
-        }
-
-        @Override
-        public String sayHello1(String name) {
-            System.err.println("i am " + name);
-            return "i am " + name;
-        }
-
-        public final String sayCglibFinal(String name) {
             System.err.println("i am " + name);
             return "i am " + name;
         }
