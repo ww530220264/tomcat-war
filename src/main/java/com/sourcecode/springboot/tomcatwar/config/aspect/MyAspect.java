@@ -1,4 +1,4 @@
-package com.sourcecode.springboot.tomcatwar.aspect;
+package com.sourcecode.springboot.tomcatwar.config.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;

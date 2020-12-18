@@ -1,8 +1,7 @@
-package com.sourcecode.springboot.tomcatwar.annotation;
+package com.sourcecode.springboot.tomcatwar.config.annotation;
 
 import com.sourcecode.springboot.tomcatwar.config.registrar.MyHandlerRegistrar;
 import com.sourcecode.springboot.tomcatwar.config.registrar.MyRegistrar;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.annotation.AliasFor;
 

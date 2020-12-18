@@ -1,6 +1,6 @@
 package com.sourcecode.springboot.tomcatwar.config.registrar;
 
-import com.sourcecode.springboot.tomcatwar.annotation.MyScan;
+import com.sourcecode.springboot.tomcatwar.config.annotation.MyScan;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.context.ResourceLoaderAware;
 import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;

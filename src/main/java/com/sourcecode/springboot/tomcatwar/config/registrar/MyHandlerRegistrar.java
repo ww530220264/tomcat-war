@@ -1,6 +1,6 @@
 package com.sourcecode.springboot.tomcatwar.config.registrar;
 
-import com.sourcecode.springboot.tomcatwar.annotation.MyEnableAutoConfiguration;
+import com.sourcecode.springboot.tomcatwar.config.annotation.MyEnableAutoConfiguration;
 import org.springframework.beans.factory.BeanClassLoaderAware;
 import org.springframework.context.ResourceLoaderAware;
 import org.springframework.context.annotation.DeferredImportSelector;

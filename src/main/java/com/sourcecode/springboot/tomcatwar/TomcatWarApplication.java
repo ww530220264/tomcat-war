@@ -1,6 +1,6 @@
 package com.sourcecode.springboot.tomcatwar;
 
-import com.sourcecode.springboot.tomcatwar.annotation.MyScan;
+import com.sourcecode.springboot.tomcatwar.config.annotation.MyScan;
 import com.sourcecode.springboot.tomcatwar.config.processors.post.bean.MyBeanPostProcessor;
 import com.sourcecode.springboot.tomcatwar.dao.IUserDao;
 import org.mybatis.spring.annotation.MapperScan;
