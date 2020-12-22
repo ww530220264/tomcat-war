@@ -1,1 +1,1 @@
-com.sourcecode.springboot.tomcatwar.config.annotation.MyEnableAutoConfiguration=com.sourcecode.springboot.tomcatwar.config.processors.post.beanfactory.beandefinition.MyBeanDefinitionRegistryPostProcessor
+com.sourcecode.springboot.tomcatwar.config.annotation.WWEnableAutoConfiguration=com.sourcecode.springboot.tomcatwar.config.processors.post.beanfactory.beandefinition.WWBeanDefinitionRegistryPostProcessor

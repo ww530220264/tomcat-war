@@ -3,7 +3,7 @@ package com.sourcecode.springboot.tomcatwar.properties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "my")
-public class MyProperties {
+public class WWProperties {
 
     private String name;
     private Integer age;

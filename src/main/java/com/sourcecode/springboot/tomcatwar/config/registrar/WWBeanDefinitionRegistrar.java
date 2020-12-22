@@ -1,6 +1,6 @@
 package com.sourcecode.springboot.tomcatwar.config.registrar;
 
-import com.sourcecode.springboot.tomcatwar.config.annotation.MyScan;
+import com.sourcecode.springboot.tomcatwar.config.annotation.WWScan;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.context.ResourceLoaderAware;
 import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;
@@ -14,13 +14,13 @@ import org.springframework.util.StringUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyRegistrar implements ImportBeanDefinitionRegistrar, ResourceLoaderAware {
+public class WWBeanDefinitionRegistrar implements ImportBeanDefinitionRegistrar, ResourceLoaderAware {
 
     private ResourceLoader resourceLoader;
 
     @Override
     public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
-        AnnotationAttributes annAttrs = AnnotationAttributes.fromMap(importingClassMetadata.getAnnotationAttributes(MyScan.class.getName()));
+        AnnotationAttributes annAttrs = AnnotationAttributes.fromMap(importingClassMetadata.getAnnotationAttributes(WWScan.class.getName()));
         ClassPathBeanDefinitionScanner scanner = new ClassPathBeanDefinitionScanner(registry);
         List<String> backPackages = new ArrayList<>();
         for (Class<?> clazz : annAttrs.getClassArray("classes")) {

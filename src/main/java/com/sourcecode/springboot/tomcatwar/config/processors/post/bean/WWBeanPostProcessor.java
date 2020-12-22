@@ -3,7 +3,7 @@ package com.sourcecode.springboot.tomcatwar.config.processors.post.bean;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.SmartInstantiationAwareBeanPostProcessor;
 
-public class MyBeanPostProcessor implements SmartInstantiationAwareBeanPostProcessor {
+public class WWBeanPostProcessor implements SmartInstantiationAwareBeanPostProcessor {
 
     @Override
     public Object getEarlyBeanReference(Object bean, String beanName) throws BeansException {

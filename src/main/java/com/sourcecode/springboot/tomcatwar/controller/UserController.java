@@ -1,15 +1,16 @@
 package com.sourcecode.springboot.tomcatwar.controller;
 
-import com.sourcecode.springboot.tomcatwar.config.annotation.MyAdvice;
+import com.sourcecode.springboot.tomcatwar.config.annotation.WWAdvice;
 import com.sourcecode.springboot.tomcatwar.po.UserPO;
 import com.sourcecode.springboot.tomcatwar.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.security.RolesAllowed;
 import java.util.List;
 
-@MyAdvice
+@WWAdvice
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -31,6 +32,7 @@ public class UserController {
         return userService.saveUser(userPO);
     }
 
+    @RolesAllowed({"ww"})
     @RequestMapping(
             value = "/query",
             params = {"name=wangwei", "age!=18"},
@@ -39,9 +41,6 @@ public class UserController {
             produces = {}
             )
     public List<UserPO> queryUser() {
-        if (true) {
-//            throw new MyException("11111111");
-        }
         return userService.queryUser();
     }
 }

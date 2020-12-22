@@ -8,7 +8,7 @@ import java.io.IOException;
 
 @WebFilter
 @Component
-public class MyFilter implements Filter {
+public class WWFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         System.err.println("init web filter: MyFilter--config: " + filterConfig);

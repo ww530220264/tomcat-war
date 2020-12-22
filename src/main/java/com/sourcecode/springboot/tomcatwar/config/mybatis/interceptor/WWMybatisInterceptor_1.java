@@ -7,14 +7,13 @@ import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.plugin.*;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
-import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Properties;
 
-@Order(Ordered.HIGHEST_PRECEDENCE)
+@Order
 @Component
 @Intercepts({
         @Signature(
@@ -27,13 +26,13 @@ import java.util.Properties;
                 args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class}
         )
 })
-public class MyMybatisInterceptor_2 implements Interceptor {
+public class WWMybatisInterceptor_1 implements Interceptor {
 
-    public MyMybatisInterceptor_2(){}
+    public WWMybatisInterceptor_1(){}
 
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
-        System.err.println("2_______________111111111111111");
+        System.err.println("1_______________111111111111111");
         Object[] args = invocation.getArgs();
         MappedStatement ms = (MappedStatement)args[0];
         Object parameter = args[1];
@@ -50,7 +49,7 @@ public class MyMybatisInterceptor_2 implements Interceptor {
             boundSql = (BoundSql)args[5];
         }
         List<Object> query = executor.query(ms, parameter, rowBounds, resultHandler, cacheKey, boundSql);
-        System.err.println("2_______________222222222222222");
+        System.err.println("1_______________222222222222222");
         return query;
     }
 

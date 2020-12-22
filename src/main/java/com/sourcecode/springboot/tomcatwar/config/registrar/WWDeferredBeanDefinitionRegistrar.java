@@ -1,6 +1,6 @@
 package com.sourcecode.springboot.tomcatwar.config.registrar;
 
-import com.sourcecode.springboot.tomcatwar.config.annotation.MyEnableAutoConfiguration;
+import com.sourcecode.springboot.tomcatwar.config.annotation.WWEnableAutoConfiguration;
 import org.springframework.beans.factory.BeanClassLoaderAware;
 import org.springframework.context.ResourceLoaderAware;
 import org.springframework.context.annotation.DeferredImportSelector;
@@ -13,14 +13,14 @@ import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 
-public class MyHandlerRegistrar implements DeferredImportSelector, BeanClassLoaderAware, ResourceLoaderAware {
+public class WWDeferredBeanDefinitionRegistrar implements DeferredImportSelector, BeanClassLoaderAware, ResourceLoaderAware {
 
     private ClassLoader beanClassLoader;
     private ResourceLoader resourceLoader;
 
     @Override
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
-        List<String> factoryNames = SpringFactoriesLoader.loadFactoryNames(MyEnableAutoConfiguration.class, beanClassLoader);
+        List<String> factoryNames = SpringFactoriesLoader.loadFactoryNames(WWEnableAutoConfiguration.class, beanClassLoader);
         factoryNames = new ArrayList<>(new LinkedHashSet<>(factoryNames));
         return StringUtils.toStringArray(factoryNames);
     }

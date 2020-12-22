@@ -1,12 +1,12 @@
 package com.sourcecode.springboot.tomcatwar.config.exception;
 
-public class MyException extends RuntimeException{
+public class WWException extends RuntimeException{
 
-    public MyException(){
+    public WWException(){
         super();
     }
 
-    public MyException(String message){
+    public WWException(String message){
         super(message);
     }
 }

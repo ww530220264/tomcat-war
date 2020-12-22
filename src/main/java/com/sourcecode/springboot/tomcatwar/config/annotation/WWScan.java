@@ -1,7 +1,7 @@
 package com.sourcecode.springboot.tomcatwar.config.annotation;
 
-import com.sourcecode.springboot.tomcatwar.config.registrar.MyHandlerRegistrar;
-import com.sourcecode.springboot.tomcatwar.config.registrar.MyRegistrar;
+import com.sourcecode.springboot.tomcatwar.config.registrar.WWDeferredBeanDefinitionRegistrar;
+import com.sourcecode.springboot.tomcatwar.config.registrar.WWBeanDefinitionRegistrar;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.annotation.AliasFor;
 
@@ -10,8 +10,8 @@ import java.lang.annotation.*;
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Import({MyRegistrar.class, MyHandlerRegistrar.class})
-public @interface MyScan {
+@Import({WWBeanDefinitionRegistrar.class, WWDeferredBeanDefinitionRegistrar.class})
+public @interface WWScan {
 
     @AliasFor("value")
     String[] basePackages() default {};

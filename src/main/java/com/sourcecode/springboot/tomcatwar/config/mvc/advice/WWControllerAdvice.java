@@ -1,7 +1,7 @@
 package com.sourcecode.springboot.tomcatwar.config.mvc.advice;
 
-import com.sourcecode.springboot.tomcatwar.config.annotation.MyAdvice;
-import com.sourcecode.springboot.tomcatwar.config.exception.MyException;
+import com.sourcecode.springboot.tomcatwar.config.annotation.WWAdvice;
+import com.sourcecode.springboot.tomcatwar.config.exception.WWException;
 import com.sourcecode.springboot.tomcatwar.vo.HttpResult;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpInputMessage;
@@ -17,12 +17,12 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 import java.io.IOException;
 import java.lang.reflect.Type;
 
-@ControllerAdvice(annotations = {MyAdvice.class})
-public class MyControllerAdvice implements ResponseBodyAdvice<Object>, RequestBodyAdvice {
+@ControllerAdvice(annotations = {WWAdvice.class})
+public class WWControllerAdvice implements ResponseBodyAdvice<Object>, RequestBodyAdvice {
 
 
-    @ExceptionHandler({MyException.class})
-    public HttpResult handleMyException(MyException e){
+    @ExceptionHandler({WWException.class})
+    public HttpResult handleMyException(WWException e){
         e.printStackTrace();
         HttpResult httpResult = new HttpResult();
         httpResult.setCode(-1);

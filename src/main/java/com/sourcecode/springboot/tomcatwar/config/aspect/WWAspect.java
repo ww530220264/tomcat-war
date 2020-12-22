@@ -7,7 +7,7 @@ import org.springframework.util.StringUtils;
 
 @Aspect
 @Component
-public class MyAspect {
+public class WWAspect {
 
     @Pointcut("execution(* *.testAop(..))")
     public void testAop() {
